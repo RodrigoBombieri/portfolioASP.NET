@@ -1,0 +1,46 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MiMaster.Master.cs" Inherits="Ejemplo1.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title><%: Page.Title %> - Mi Portfolio con ASP.NET</title>
+    
+    
+    <asp:ContentPlaceHolder ID="head" runat="server">
+        <script src="js/script.js"></script>
+    </asp:ContentPlaceHolder>
+
+    <link href="content/estilos.css" rel="stylesheet" />
+  
+    
+
+</head>
+<body>
+    <header class="cabecera">
+    <nav class="menu-nav">          
+               <a href="Default.aspx"><img src="img/logo3.png" alt="logo" class="zoom"></a>
+                <ul>
+                    <li><a href="Default.aspx">Inicio</a></li>
+                    <li><a href="About.aspx">Acerca de</a></li>
+                    <li><a href="Contact.aspx">Contacto</a></li>
+                    <li><a href="Projects.aspx">Proyectos</a></li>
+                </ul>
+    </nav>
+</header>
+
+    <form id="form1" runat="server">
+        <div>
+            <h1>Menu</h1>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+            <footer>
+                <p>&copy; <%: DateTime.Now.Year %> - Mi Portfolio ASP.NET</p>
+            </footer>
+        </div>
+    </form>
+</body>
+</html>
